@@ -10,12 +10,15 @@
     <unique-id>3ovio62b1q9st</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_SLGBoard" version="0.100000001">Board</plugin>
         <plugin author="Rex.Rainbow" id="Rex_SLGSquareTx" version="0.100000001">Square Tx</plugin>
         <plugin author="Rex.Rainbow" id="Rex_layout2board" version="0.100000001">Layout to Board</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -28,9 +31,10 @@
     </configurations>
     <window-size>
         <width>500</width>
-        <height>300</height>
+        <height>320</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
+    <first-layout>TelaInicial</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -43,15 +47,21 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="ui">
+        <object-folder expanded="1" name="gui-hud">
             <object-type name="TextoRolarDado" sid="1785484461515545">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextoPassos" sid="6913811722589862">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TituloEduQuest" sid="2127787048154097">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoIniciarJogo" sid="4069374654707794">
+                <plugin id="Button" />
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="board">
+        <object-folder expanded="1" name="tabuleiro">
             <object-type global="1" name="Board" sid="329029806366312">
                 <plugin id="Rex_SLGBoard" />
             </object-type>
@@ -131,13 +141,29 @@
         <object-type name="Function" sid="2293074085347091">
             <plugin id="Function" />
         </object-type>
+        <object-type name="fundo" sid="7375583827610958">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="fundotitulo" sid="980952924201226">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="textoadmin" sid="227180781880715">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="4499813849139052">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Tabuleiro.xml</layout>
+        <layout>TelaInicial.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Peao-Mecanica.xml</event-sheet>
+        <event-sheet>TelaInicial-Botao.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="44">
@@ -146,6 +172,7 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="45" />
+        <global-instance type="Mouse" uid="53" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

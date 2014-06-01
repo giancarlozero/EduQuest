@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TelaInicial-Botao</name>
+    <events>
+        <event-block sid="2367513625004943">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4490762168155771" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">BotaoIniciarJogo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="99639687910211" type="System">
+                    <param id="0" name="Layout">Tabuleiro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
