@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Peao-Mecanica</name>
+    <events>
+        <comment>Construção do tabuleiro</comment>
+        <event-block sid="8036198230466318">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6101048111592138" type="System" />
+            </conditions>
+            <actions>
+                <action id="11" name="Setup layout" sid="2532736502358547" type="Board">
+                    <param id="0" name="Layout">SquareTx</param>
+                </action>
+                <action id="1" name="Put chess on board" sid="6700110581027936" type="LayoutToBoard">
+                    <param id="0" name="Chess">Casa</param>
+                    <param id="1" name="Board">Board</param>
+                    <param id="2" name="Logic Z">0</param>
+                </action>
+                <action id="1" name="Put chess on board" sid="8747865653464564" type="LayoutToBoard">
+                    <param id="0" name="Chess">Peao</param>
+                    <param id="1" name="Board">Board</param>
+                    <param id="2" name="Logic Z">1</param>
+                </action>
+                <action id="0" name="Call function" sid="2607542231303547" type="Function">
+                    <param id="0" name="Name">&quot;DirMode.Show&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4950108518428652">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4926460454228136" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-group description="Mecânica de movimentação do peão" sid="9183520823929307" title="Peão">
+            <sub-events>
+                <event-group description="" sid="4497441393808702" title="Peão: começar">
+                    <sub-events>
+                        <variable constant="0" name="passos" sid="2014353928405029" static="0" type="number">0</variable>
+                        <event-block sid="7864369399616167">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="1400693533596274" type="Touch">
+                                    <param id="0" name="Object">TextoRolarDado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="9874482963052694" type="System">
+                                    <param id="0" name="Group name">&quot;Move chess : start&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3026546236501786" type="System">
+                                    <param id="0" name="Variable">passos</param>
+                                    <param id="1" name="Value">int(random(1, 7))</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5051033083647266" type="TextoPassos">
+                                    <param id="0" name="Text">passos</param>
+                                </action>
+                                <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="6264501712274465" type="Peao">
+                                    <param id="0" name="Moving points">passos</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6304477461840857" type="TextoRolarDado">
+                                    <param id="0" name="Text">&quot;Aguarde...&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3246310803574187">
+                                    <conditions>
+                                        <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="4215377107422028" type="Peao">
+                                            <param id="0" name="Object">Casa</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="GridMove" id="11" name="Move to target" sid="263055341851685" type="Peao">
+                                            <param id="0" name="Target">Casa</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Move chess : moving</comment>
+                <event-block sid="2630763896510859">
+                    <conditions>
+                        <condition behavior="GridMove" id="0" name="On hit target position" sid="6729946556036334" type="Peao" />
+                        <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="6413464492397552" type="Peao">
+                            <param id="0" name="Object">Casa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="GridMove" id="11" name="Move to target" sid="8122765376332636" type="Peao">
+                            <param id="0" name="Target">Casa</param>
+                        </action>
+                        <action id="0" name="Set text" sid="650768799359416" type="TextoRolarDado">
+                            <param id="0" name="Text">&quot;Aguarde...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Move chess : finished</comment>
+                <event-block sid="8476890994141044">
+                    <conditions>
+                        <condition behavior="GridMove" id="0" name="On hit target position" sid="3663592116856482" type="Peao" />
+                        <condition behavior="MonopolyMovement" id="3" name="Empty" sid="1564001702588055" type="Peao" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="4994313963056144" type="System">
+                            <param id="0" name="Group name">&quot;Move chess : start&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action behavior="MonopolyMovement" id="5" name="Set face by number" sid="6612273121819657" type="Peao">
+                            <param id="0" name="Face to">Peao.MonopolyMovement.TargetFaceDir</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8181868674790621" type="TextoRolarDado">
+                            <param id="0" name="Text">&quot;ROLAR DADO&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3498312663785252" title="Custo de movimento">
+            <sub-events>
+                <event-block sid="3400628816622582">
+                    <conditions>
+                        <condition behavior="MonopolyMovement" id="7" name="On get moving cost" sid="4952575192732357" type="Peao" />
+                        <condition id="14" name="Pick chess above tile UID" sid="7172107699829324" type="Board">
+                            <param id="0" name="Chess">Casa</param>
+                            <param id="1" name="Tile UID">Peao.MonopolyMovement.TileUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="MonopolyMovement" id="7" name="Set cost" sid="3298152484485487" type="Peao">
+                            <param id="0" name="Cost">Casa.cost</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

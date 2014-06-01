@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>EduQuest</name>
-    <description></description>
+    <description>Protótipo de jogo educativo (serious game) em HTML5 para o meu TCC do curso de TADS do IFRN Natal/Central</description>
     <version>0.0.1 alpha</version>
     <author>Giancarlo Silva</author>
     <author-email>giancarlozero@gmail.com</author-email>
     <author-website>http://giancarlosilva.com.br</author-website>
     <app-id>br.com.giancarlosilva</app-id>
-    <unique-id>1rnc8fz4n0i62</unique-id>
+    <unique-id>3ovio62b1q9st</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -15,18 +15,20 @@
         <plugin author="Rex.Rainbow" id="Rex_SLGSquareTx" version="0.100000001">Square Tx</plugin>
         <plugin author="Rex.Rainbow" id="Rex_layout2board" version="0.100000001">Layout to Board</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_GridMove" version="0.100000001">Grid Move</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MonopolyMovement" version="0.100000001">Monopoly movement</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>890</width>
-        <height>575</height>
+        <width>500</width>
+        <height>300</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
@@ -34,113 +36,121 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox integer scale</prop>
-        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Orientations">Any</prop>
-        <prop name="Pause on unfocus">No</prop>
-        <prop name="Physics engine">Box2D web</prop>
         <prop name="Preview browser">Chrome</prop>
-        <prop name="Sampling">Point</prop>
-        <prop name="Use high-DPI display">Yes</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="Tilemap" sid="4010285078065276">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="7168289612840981">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-            <tiles>
-                <tile id="1">
-                    <collision-poly>
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="2">
-                    <collision-poly>
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="4">
-                    <collision-poly>
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-                <tile id="5">
-                    <collision-poly>
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-            </tiles>
+        <object-folder expanded="1" name="ui">
+            <object-type name="TextoRolarDado" sid="1785484461515545">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoPassos" sid="6913811722589862">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder expanded="1" name="board">
+            <object-type global="1" name="Board" sid="329029806366312">
+                <plugin id="Rex_SLGBoard" />
+            </object-type>
+            <object-type name="Peao" sid="4291037664023157">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="MonopolyMovement" sid="4567353597868149">
+                        <behavior id="Rex_MonopolyMovement" />
+                    </behavior-type>
+                    <behavior-type name="GridMove" sid="7156176092053898">
+                        <behavior id="Rex_GridMove" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="787371334609687" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.5" y="0.140625" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.84375" y="0.5" />
+                                <point x="0.734375" y="0.734375" />
+                                <point x="0.5" y="0.828125" />
+                                <point x="0.265625" y="0.734375" />
+                                <point x="0.15625" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="LayoutToBoard" sid="1911691822520626">
+                <plugin id="Rex_layout2board" />
+            </object-type>
+            <object-type global="1" name="SquareTx" sid="9216783946740305">
+                <plugin id="Rex_SLGSquareTx" />
+            </object-type>
+            <object-type name="Casa" sid="300232683050011">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="cost" sid="6431803786264363" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2857353885265114" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.984375" y="0.015625" />
+                                <point x="0.984375" y="0.984375" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.984375" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="8854500972911517">
+            <plugin id="Touch" />
         </object-type>
-        <object-type global="1" name="Board" sid="5772519553981362">
-            <plugin id="Rex_SLGBoard" />
-        </object-type>
-        <object-type global="1" name="SquareTx" sid="4347457658851066">
-            <plugin id="Rex_SLGSquareTx" />
-        </object-type>
-        <object-type global="1" name="LayoutToBoard" sid="3523447288707413">
-            <plugin id="Rex_layout2board" />
-        </object-type>
-        <object-type name="Peao" sid="3912287623445619">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7208157979024398" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739">
-                        <collision-poly>
-                            <point x="0.152174" y="0.173913" />
-                            <point x="0.5" y="0.0217391" />
-                            <point x="0.847826" y="0.173913" />
-                            <point x="0.978261" y="0.521739" />
-                            <point x="0.826087" y="0.847826" />
-                            <point x="0.5" y="0.978261" />
-                            <point x="0.173913" y="0.847826" />
-                            <point x="0.0217391" y="0.521739" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CasaNeutra" sid="3024351315968045">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3049885880415741" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Function" sid="5382016273797466">
+        <object-type name="Function" sid="2293074085347091">
             <plugin id="Function" />
         </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>Tabuleiro.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Peao-Mecanica.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Function" uid="6" />
+        <global-instance type="Touch" uid="44">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="45" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
     <files-folder expanded="1">
-        <file-folder expanded="0" name="Icons">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />
