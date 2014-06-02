@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BotaoIniciarJogo</name>
+    <events>
+        <event-block sid="3819494444951052">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9689604199563785" type="Touch">
+                    <param id="0" name="Object">TextoIniciarJogo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6195127299385958" type="System">
+                    <param id="0" name="Layout">&quot;Tabuleiro&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

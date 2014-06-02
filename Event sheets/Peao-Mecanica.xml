@@ -42,7 +42,7 @@
                         <event-block sid="7864369399616167">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="1400693533596274" type="Touch">
-                                    <param id="0" name="Object">TextoRolarDado</param>
+                                    <param id="0" name="Object">TextoResultadoDado</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -54,7 +54,7 @@
                                     <param id="0" name="Variable">passos</param>
                                     <param id="1" name="Value">int(random(1, 7))</param>
                                 </action>
-                                <action id="0" name="Set text" sid="5051033083647266" type="TextoPassos">
+                                <action id="0" name="Set text" sid="5051033083647266" type="TextoResultadoDado">
                                     <param id="0" name="Text">passos</param>
                                 </action>
                                 <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="6264501712274465" type="Peao">
@@ -113,7 +113,7 @@
                             <param id="0" name="Face to">Peao.MonopolyMovement.TargetFaceDir</param>
                         </action>
                         <action id="0" name="Set text" sid="8181868674790621" type="TextoRolarDado">
-                            <param id="0" name="Text">&quot;ROLAR DADO&quot;</param>
+                            <param id="0" name="Text">&quot;CLIQUE NO DADO&quot;</param>
                         </action>
                     </actions>
                 </event-block>

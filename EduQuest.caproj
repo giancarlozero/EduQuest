@@ -10,7 +10,6 @@
     <unique-id>3ovio62b1q9st</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_SLGBoard" version="0.100000001">Board</plugin>
@@ -39,7 +38,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Preview browser">Chrome</prop>
@@ -51,17 +50,74 @@
             <object-type name="TextoRolarDado" sid="1785484461515545">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TextoPassos" sid="6913811722589862">
+            <object-type name="TextoResultadoDado" sid="6913811722589862">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TituloEduQuest" sid="2127787048154097">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="BotaoIniciarJogo" sid="4069374654707794">
-                <plugin id="Button" />
+            <object-type name="TextoAdmin" sid="227180781880715">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoIniciarJogo" sid="4069895336170236">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="HUDInferior" sid="290036963574866">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5020273559129368" speed="5">
+                        <frame duration="1" hotspotX="0.500395" hotspotY="0.502564">
+                            <collision-poly>
+                                <point x="0.00552486" y="0.0358974" />
+                                <point x="0.499605" y="0" />
+                                <point x="0.994475" y="0.0358974" />
+                                <point x="0.994475" y="0.964103" />
+                                <point x="0.499605" y="0.994872" />
+                                <point x="0.00552486" y="0.964103" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HUDLateral" sid="3058269373153225">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3073644284666634" speed="5">
+                        <frame duration="1" hotspotX="0.50078" hotspotY="0.500393">
+                            <collision-poly>
+                                <point x="0.00936037" y="0.00471328" />
+                                <point x="0.99064" y="0.00471328" />
+                                <point x="0.99064" y="0.995287" />
+                                <point x="0.00936037" y="0.995287" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Dado" sid="4755594483194413">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2933453154537317" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507246">
+                            <collision-poly>
+                                <point x="0.171875" y="0.15942" />
+                                <point x="0.5" y="0.0434783" />
+                                <point x="0.8125" y="0.173913" />
+                                <point x="0.96875" y="0.492754" />
+                                <point x="0.8125" y="0.826087" />
+                                <point x="0.5" y="0.956522" />
+                                <point x="0.203125" y="0.811594" />
+                                <point x="0.046875" y="0.492754" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OpçõesTEMP" sid="637356056230269">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="tabuleiro">
+        <object-folder expanded="0" name="tabuleiro">
             <object-type global="1" name="Board" sid="329029806366312">
                 <plugin id="Rex_SLGBoard" />
             </object-type>
@@ -149,21 +205,18 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="textoadmin" sid="227180781880715">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Mouse" sid="4499813849139052">
             <plugin id="Mouse" />
         </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Tabuleiro.xml</layout>
         <layout>TelaInicial.xml</layout>
+        <layout>Tabuleiro.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Peao-Mecanica.xml</event-sheet>
-        <event-sheet>TelaInicial-Botao.xml</event-sheet>
+        <event-sheet>BotaoIniciarJogo.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="44">
