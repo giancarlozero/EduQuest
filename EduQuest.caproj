@@ -56,7 +56,7 @@
             <object-type name="TituloEduQuest" sid="2127787048154097">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TextoAdmin" sid="227180781880715">
+            <object-type name="TelaInicialAdmin" sid="227180781880715">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextoIniciarJogo" sid="4069895336170236">
@@ -113,7 +113,94 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="OpçõesTEMP" sid="637356056230269">
+            <object-type name="PlacarPeoes" sid="5620480000755481">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9137191941238561" speed="5">
+                        <frame duration="1" hotspotX="0.500595" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0487515" y="0.0685619" />
+                                <point x="0.951249" y="0.0685619" />
+                                <point x="0.951249" y="0.931438" />
+                                <point x="0.0499405" y="0.929766" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PontosVerde" sid="5351222795718195">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PontosAmarelo" sid="3994446720358145">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PontosAzul" sid="7632006768902308">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PontosVermelho" sid="2514289821581503">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoPlacar" sid="3389138912745323">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoPuxarCarta" sid="3676708901222213">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4049945558975455" speed="5">
+                        <frame duration="1" hotspotX="0.50211" hotspotY="0.503448">
+                            <collision-poly>
+                                <point x="0.113924" y="0.186207" />
+                                <point x="0.49789" y="0.0344828" />
+                                <point x="0.898734" y="0.165517" />
+                                <point x="0.966245" y="0.496552" />
+                                <point x="0.924051" y="0.875862" />
+                                <point x="0.49789" y="0.993103" />
+                                <point x="0.0843882" y="0.862069" />
+                                <point x="0.0337553" y="0.496552" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuOpcoes" sid="7258273430990422">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="MenuVerPlacares" sid="6527412807279604">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="MenuSair" sid="5599042431354771">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoCarta" sid="3871700423516068">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4636542655806675" speed="5">
+                        <frame duration="1" hotspotX="0.500545" hotspotY="0.500409">
+                            <collision-poly>
+                                <point x="0.0163577" y="0.012285" />
+                                <point x="0.983642" y="0.012285" />
+                                <point x="0.998909" y="0.49959" />
+                                <point x="0.983642" y="0.987715" />
+                                <point x="0.0163577" y="0.987715" />
+                                <point x="0" y="0.49959" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TituloDesafioEduQuest" sid="8161018022504314">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="EnunciadoDesafio" sid="4621716259791637">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextoBotoesDesafio" sid="8574372756899347">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoCorreta" sid="1493082029558456">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BotaoErrada" sid="8291286641339404">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -213,10 +300,12 @@
     <layout-folder expanded="1">
         <layout>TelaInicial.xml</layout>
         <layout>Tabuleiro.xml</layout>
+        <layout>CartaDesafio.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Peao-Mecanica.xml</event-sheet>
-        <event-sheet>BotaoIniciarJogo.xml</event-sheet>
+        <event-sheet>Tabuleiro.xml</event-sheet>
+        <event-sheet>TelaInicial.xml</event-sheet>
+        <event-sheet>CartaDesafio.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="44">
@@ -229,8 +318,8 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
-        <file-folder expanded="1" name="Icons">
+    <files-folder expanded="0">
+        <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />

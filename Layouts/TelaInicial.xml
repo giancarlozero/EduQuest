@@ -2,7 +2,7 @@
 <c2layout>
     <name>TelaInicial</name>
     <sid>9148656764614128</sid>
-    <event-sheet>BotaoIniciarJogo</event-sheet>
+    <event-sheet>TelaInicial</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -39,7 +39,7 @@
                         <y>-5</y>
                         <z>0</z>
                         <width>512</width>
-                        <height>512</height>
+                        <height>337</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -51,7 +51,7 @@
                     <properties>
                         <text>EduQuest</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Segoe UI,-96,700,0</font>
+                        <font>Arial,-91,700,0</font>
                         <color>255,204,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -74,7 +74,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextoAdmin" uid="52">
+                <instance type="TelaInicialAdmin" uid="52">
                     <properties>
                         <text>Professor ou admin? Clique aqui.</text>
                         <initial-visibility>Visible</initial-visibility>

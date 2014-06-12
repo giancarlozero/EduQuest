@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Peao-Mecanica</name>
+    <name>Tabuleiro</name>
     <events>
         <comment>Construção do tabuleiro</comment>
         <event-block sid="8036198230466318">
@@ -137,5 +137,31 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Menu de opções do rodapé da tela</comment>
+        <event-block sid="5793602329541202">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3650775778873241" type="Touch">
+                    <param id="0" name="Object">MenuSair</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4179973944843765" type="System">
+                    <param id="0" name="Layout">TelaInicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Botão para puxar e ler carta de desafio (caso o peão caia em uma Casa de Desafio</comment>
+        <event-block sid="3316751500175399">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1839428554772019" type="Touch">
+                    <param id="0" name="Object">BotaoPuxarCarta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="366298832106091" type="System">
+                    <param id="0" name="Layout">CartaDesafio</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
