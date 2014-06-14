@@ -2,7 +2,7 @@
 <c2project>
     <name>EduQuest</name>
     <description>Protótipo de jogo educativo (serious game) em HTML5 para o meu TCC do curso de TADS do IFRN Natal/Central</description>
-    <version>0.0.1 alpha</version>
+    <version>0.1.0 alpha</version>
     <author>Giancarlo Silva</author>
     <author-email>giancarlozero@gmail.com</author-email>
     <author-website>http://giancarlosilva.com.br</author-website>
@@ -46,7 +46,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="gui-hud">
+        <object-folder expanded="0" name="gui-hud">
             <object-type name="TextoRolarDado" sid="1785484461515545">
                 <plugin id="Text" />
             </object-type>
@@ -204,7 +204,7 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
-        <object-folder expanded="0" name="tabuleiro">
+        <object-folder expanded="1" name="tabuleiro">
             <object-type global="1" name="Board" sid="329029806366312">
                 <plugin id="Rex_SLGBoard" />
             </object-type>
