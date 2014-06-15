@@ -36,7 +36,7 @@
         </event-block>
         <event-group description="Mecânica de movimentação do peão" sid="9183520823929307" title="Peão">
             <sub-events>
-                <event-group description="" sid="4497441393808702" title="Peão: começar">
+                <event-group description="" sid="4497441393808702" title="Movimento do peão">
                     <sub-events>
                         <variable constant="0" name="passos" sid="2014353928405029" static="0" type="number">0</variable>
                         <event-block sid="7864369399616167">

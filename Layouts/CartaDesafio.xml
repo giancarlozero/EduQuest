@@ -38,8 +38,8 @@
                         <x>-6</x>
                         <y>-6</y>
                         <z>0</z>
-                        <width>512</width>
-                        <height>341</height>
+                        <width>511.285919189</width>
+                        <height>333.149139404</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -214,6 +214,33 @@
                         <z>0</z>
                         <width>100</width>
                         <height>39</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AvisoTEMP" uid="74">
+                    <properties>
+                        <text>Esta tela ainda não está pronta. Clique aqui para voltar ao tabuleiro.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-11,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>412.530303955</x>
+                        <y>207.937942505</y>
+                        <z>0</z>
+                        <width>74.38168335</width>
+                        <height>95.663742065</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
