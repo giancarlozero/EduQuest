@@ -8,7 +8,7 @@
     <author-website>http://giancarlosilva.com.br</author-website>
     <app-id>br.com.giancarlosilva</app-id>
     <unique-id>3ovio62b1q9st</unique-id>
-    <saved-with-version>16800</saved-with-version>
+    <saved-with-version>17300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -54,9 +54,6 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="TituloEduQuest" sid="2127787048154097">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="TelaInicialAdmin" sid="227180781880715">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextoIniciarJogo" sid="4069895336170236">
@@ -204,6 +201,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="AvisoTEMP" sid="1554000657924036">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TelaInicialVersao" sid="1628462916619055">
                 <plugin id="Text" />
             </object-type>
         </object-folder>

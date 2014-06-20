@@ -39,7 +39,7 @@
                         <y>-5</y>
                         <z>0</z>
                         <width>512</width>
-                        <height>337</height>
+                        <height>328</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -63,37 +63,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>31</x>
-                        <y>13</y>
+                        <y>48</y>
                         <z>0</z>
                         <width>453</width>
                         <height>157</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TelaInicialAdmin" uid="52">
-                    <properties>
-                        <text>Professor ou admin? Clique aqui.</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>204,255,204</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>258</x>
-                        <y>295</y>
-                        <z>0</z>
-                        <width>243</width>
-                        <height>23</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -117,10 +90,37 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>159</x>
-                        <y>194</y>
+                        <y>217</y>
                         <z>0</z>
                         <width>173</width>
                         <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TelaInicialVersao" uid="52">
+                    <properties>
+                        <text>0.1.0 alpha</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>255,255,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>381</x>
+                        <y>138</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

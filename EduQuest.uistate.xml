@@ -11,11 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Tabuleiro</layout>
-        <layout>TelaInicial</layout>
+        <layout active="1">TelaInicial</layout>
         <layout>CartaDesafio</layout>
         <event-sheet>Tabuleiro</event-sheet>
         <event-sheet>TelaInicial</event-sheet>
-        <event-sheet active="1">CartaDesafio</event-sheet>
+        <event-sheet>CartaDesafio</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
