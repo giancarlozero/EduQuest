@@ -1420,37 +1420,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>44</x>
+                        <x>75</x>
                         <y>278</y>
                         <z>0</z>
                         <width>68</width>
-                        <height>34</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MenuVerPlacares" uid="66">
-                    <properties>
-                        <text>Ver Placares</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16,700,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>124</x>
-                        <y>278</y>
-                        <z>0</z>
-                        <width>102</width>
                         <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1474,8 +1447,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>246</x>
-                        <y>278</y>
+                        <x>210</x>
+                        <y>279</y>
                         <z>0</z>
                         <width>68</width>
                         <height>34</height>

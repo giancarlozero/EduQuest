@@ -138,6 +138,18 @@
             </sub-events>
         </event-group>
         <comment>Menu de opções do rodapé da tela</comment>
+        <event-block sid="8801528166964967">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6865065761471013" type="Touch">
+                    <param id="0" name="Object">MenuOpcoes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8020046019215054" type="System">
+                    <param id="0" name="Layout">OpcoesTabuleiro</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="5793602329541202">
             <conditions>
                 <condition id="3" name="On touched object" sid="3650775778873241" type="Touch">

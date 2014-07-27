@@ -2,7 +2,7 @@
 <c2project>
     <name>EduQuest</name>
     <description>Protótipo de jogo educativo (serious game) em HTML5 para o meu TCC do curso de TADS do IFRN Natal/Central</description>
-    <version>0.1.0 alpha</version>
+    <version>0.1.2 alpha</version>
     <author>Giancarlo Silva</author>
     <author-email>giancarlozero@gmail.com</author-email>
     <author-website>http://giancarlosilva.com.br</author-website>
@@ -11,6 +11,7 @@
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Rex.Rainbow" id="Rex_SLGBoard" version="0.100000001">Board</plugin>
         <plugin author="Rex.Rainbow" id="Rex_SLGSquareTx" version="0.100000001">Square Tx</plugin>
@@ -206,6 +207,33 @@
             <object-type name="TelaInicialVersao" sid="1628462916619055">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="OpcoesDeJogo" sid="4411248574245249">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ListaDisciplinas" sid="433834966593021">
+                <plugin id="List" />
+            </object-type>
+            <object-type name="OpcoesTrocarDisciplina" sid="7401365464436288">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="OpcoesAviso01" sid="7361002651844511">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="OpcoesSIM" sid="5713681398231751">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="OpcoesReiniciarJogo" sid="8420017353047018">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="OpcoesAviso02" sid="2109870784193228">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="OpcoesSalvarSair" sid="2681455348537152">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="MenuOpcoesInicial" sid="4223674704561171">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder expanded="1" name="tabuleiro">
             <object-type global="1" name="Board" sid="329029806366312">
@@ -304,11 +332,15 @@
         <layout>TelaInicial.xml</layout>
         <layout>Tabuleiro.xml</layout>
         <layout>CartaDesafio.xml</layout>
+        <layout>OpcoesTabuleiro.xml</layout>
+        <layout>OpcoesInicial.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Tabuleiro.xml</event-sheet>
         <event-sheet>TelaInicial.xml</event-sheet>
         <event-sheet>CartaDesafio.xml</event-sheet>
+        <event-sheet>OpcoesTabuleiro.xml</event-sheet>
+        <event-sheet>OpcoesInicial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="44">
@@ -321,8 +353,8 @@
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="0">
-        <file-folder expanded="0" name="Icons">
+    <files-folder expanded="1">
+        <file-folder expanded="1" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>TelaInicial</name>
-    <sid>9148656764614128</sid>
-    <event-sheet>TelaInicial</event-sheet>
+    <name>OpcoesInicial</name>
+    <sid>7064618637153913</sid>
+    <event-sheet>OpcoesInicial</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="185653915546969">
+        <layer name="Layer 0" sid="1561412174413529">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="fundotitulo" uid="50">
+                <instance type="fundotitulo" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -35,8 +35,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-5</x>
-                        <y>-5</y>
+                        <x>-2</x>
+                        <y>-1</y>
                         <z>0</z>
                         <width>512</width>
                         <height>328</height>
@@ -47,38 +47,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TituloEduQuest" uid="40">
+                <instance type="OpcoesDeJogo" uid="85">
                     <properties>
-                        <text>EduQuest</text>
+                        <text>OPÇÕES DO JOGO</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-91,700,0</font>
-                        <color>255,204,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>31</x>
-                        <y>48</y>
-                        <z>0</z>
-                        <width>453</width>
-                        <height>157</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextoIniciarJogo" uid="51">
-                    <properties>
-                        <text>INICIAR JOGO</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,700,0</font>
+                        <font>Arial,-21,700,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -89,11 +62,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>159</x>
-                        <y>186</y>
+                        <x>147</x>
+                        <y>11</y>
                         <z>0</z>
-                        <width>173</width>
-                        <height>37</height>
+                        <width>212</width>
+                        <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -101,11 +74,62 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TelaInicialVersao" uid="52">
+                <instance type="ListaDisciplinas" uid="86">
                     <properties>
-                        <text>0.1.2 alpha</text>
+                        <items>Programação Orientada a Objetos;Estruturas de Dados;Álgebra Linear;Interface Humano-Computador;Lógica Computacional;Matemática Discreta</items>
+                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <enabled>Yes</enabled>
+                        <type>Dropdown list</type>
+                        <multi-select>No</multi-select>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>254</x>
+                        <y>56</y>
+                        <z>0</z>
+                        <width>196</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="OpcoesTrocarDisciplina" uid="87">
+                    <properties>
+                        <text>Trocar Disciplina?</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-21,700,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>53</x>
+                        <y>57</y>
+                        <z>0</z>
+                        <width>202</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OpcoesAviso01" uid="88">
+                    <properties>
+                        <text>Ao trocar a disciplina, todo o progresso será perdido e uma nova partida será iniciada</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-13,400,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -116,11 +140,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>381</x>
-                        <y>138</y>
+                        <x>63</x>
+                        <y>94</y>
                         <z>0</z>
-                        <width>100</width>
-                        <height>30</height>
+                        <width>380</width>
+                        <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -128,11 +152,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuOpcoesInicial" uid="84">
+                <instance type="OpcoesSalvarSair" uid="92">
                     <properties>
-                        <text>OPÇÕES</text>
+                        <text>Salvar e Sair</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,700,0</font>
+                        <font>Arial,-19,700,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -143,11 +167,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>191</x>
-                        <y>229</y>
+                        <x>187</x>
+                        <y>265</y>
                         <z>0</z>
-                        <width>108</width>
-                        <height>37</height>
+                        <width>122</width>
+                        <height>33</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

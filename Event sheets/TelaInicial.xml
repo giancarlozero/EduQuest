@@ -15,5 +15,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9590085798900867">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8268393220181518" type="Touch">
+                    <param id="0" name="Object">MenuOpcoesInicial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7307353556391198" type="System">
+                    <param id="0" name="Layout">OpcoesInicial</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
