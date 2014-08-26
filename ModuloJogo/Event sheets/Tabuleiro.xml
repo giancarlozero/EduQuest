@@ -81,7 +81,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <comment>Move chess : moving</comment>
+                <comment>Peão andando</comment>
                 <event-block sid="2630763896510859">
                     <conditions>
                         <condition behavior="GridMove" id="0" name="On hit target position" sid="6729946556036334" type="Peao" />
@@ -98,7 +98,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Move chess : finished</comment>
+                <comment>Peão terminando de andar</comment>
                 <event-block sid="8476890994141044">
                     <conditions>
                         <condition behavior="GridMove" id="0" name="On hit target position" sid="3663592116856482" type="Peao" />

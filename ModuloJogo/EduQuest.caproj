@@ -8,7 +8,7 @@
     <author-website>http://giancarlosilva.com.br</author-website>
     <app-id>br.com.giancarlosilva</app-id>
     <unique-id>3ovio62b1q9st</unique-id>
-    <saved-with-version>17300</saved-with-version>
+    <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
@@ -34,6 +34,7 @@
         <height>320</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
     <first-layout>TelaInicial</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
