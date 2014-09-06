@@ -169,11 +169,65 @@
                     <param id="0" name="Object">BotaoPuxarCarta</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="366298832106091" type="System">
-                    <param id="0" name="Layout">CartaDesafio</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
+        <event-group description="" sid="2980196645495356" title="Casas de Desafio">
+            <sub-events>
+                <event-block sid="1339595711847871">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1807853911444362" type="Peao">
+                            <param id="0" name="Object">MostraCartaDesafio</param>
+                        </condition>
+                        <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="752888093524051" type="Peao" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="6414578247419702" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2805425322292551" title="Casas de Avanço/Retorno">
+            <sub-events>
+                <variable constant="0" name="passos2" sid="6663952385814971" static="0" type="number">0</variable>
+                <event-block sid="154810845155566">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2520716812819351" type="Peao">
+                            <param id="0" name="Object">MovePeao</param>
+                        </condition>
+                        <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="4074202941824311" type="Peao" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="392127679595973" type="System">
+                            <param id="0" name="Variable">passos2</param>
+                            <param id="1" name="Value">int(random(1, 4))</param>
+                        </action>
+                        <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="7980169169275053" type="Peao">
+                            <param id="0" name="Moving points">passos2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9706972131235279">
+                            <conditions>
+                                <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="9647114605176508" type="Peao">
+                                    <param id="0" name="Object">Casa</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="GridMove" id="11" name="Move to target" sid="125410125461267" type="Peao">
+                                    <param id="0" name="Target">Casa</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1485593345855373">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

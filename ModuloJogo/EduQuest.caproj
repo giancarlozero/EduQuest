@@ -48,7 +48,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="gui-hud">
+        <object-folder expanded="0" name="gui-hud">
             <object-type name="TextoRolarDado" sid="1785484461515545">
                 <plugin id="Text" />
             </object-type>
@@ -202,9 +202,6 @@
             <object-type name="BotaoErrada" sid="8291286641339404">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="AvisoTEMP" sid="1554000657924036">
-                <plugin id="Text" />
-            </object-type>
             <object-type name="TelaInicialVersao" sid="1628462916619055">
                 <plugin id="Text" />
             </object-type>
@@ -252,16 +249,16 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="787371334609687" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.510638" hotspotY="0.510638">
                             <collision-poly>
-                                <point x="0.25" y="0.25" />
-                                <point x="0.5" y="0.140625" />
-                                <point x="0.75" y="0.25" />
-                                <point x="0.84375" y="0.5" />
-                                <point x="0.734375" y="0.734375" />
-                                <point x="0.5" y="0.828125" />
-                                <point x="0.265625" y="0.734375" />
-                                <point x="0.15625" y="0.5" />
+                                <point x="0.170213" y="0.170213" />
+                                <point x="0.510638" y="0.0212766" />
+                                <point x="0.851064" y="0.170213" />
+                                <point x="0.978723" y="0.510638" />
+                                <point x="0.829787" y="0.829787" />
+                                <point x="0.510638" y="0.957447" />
+                                <point x="0.191489" y="0.829787" />
+                                <point x="0.0425532" y="0.510638" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -309,6 +306,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="MostraCartaDesafio" sid="141614826038644">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3125652327950613" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MovePeao" sid="4466461750527358">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2861375012782998" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Touch" sid="8854500972911517">
             <plugin id="Touch" />
@@ -332,14 +345,12 @@
     <layout-folder expanded="1">
         <layout>TelaInicial.xml</layout>
         <layout>Tabuleiro.xml</layout>
-        <layout>CartaDesafio.xml</layout>
         <layout>OpcoesTabuleiro.xml</layout>
         <layout>OpcoesInicial.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Tabuleiro.xml</event-sheet>
         <event-sheet>TelaInicial.xml</event-sheet>
-        <event-sheet>CartaDesafio.xml</event-sheet>
         <event-sheet>OpcoesTabuleiro.xml</event-sheet>
         <event-sheet>OpcoesInicial.xml</event-sheet>
     </event-folder>
