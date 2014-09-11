@@ -10,6 +10,7 @@
     <unique-id>3ovio62b1q9st</unique-id>
     <saved-with-version>17800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -339,6 +340,9 @@
         </object-type>
         <object-type name="Mouse" sid="4499813849139052">
             <plugin id="Mouse" />
+        </object-type>
+        <object-type global="1" name="Desafios" sid="4290239510727422">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />

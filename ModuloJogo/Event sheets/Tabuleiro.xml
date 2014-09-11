@@ -3,229 +3,295 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Tabuleiro</name>
     <events>
-        <comment>Construção do tabuleiro</comment>
-        <event-block sid="8036198230466318">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="6101048111592138" type="System" />
-            </conditions>
-            <actions>
-                <action id="11" name="Setup layout" sid="2532736502358547" type="Board">
-                    <param id="0" name="Layout">SquareTx</param>
-                </action>
-                <action id="1" name="Put chess on board" sid="6700110581027936" type="LayoutToBoard">
-                    <param id="0" name="Chess">Casa</param>
-                    <param id="1" name="Board">Board</param>
-                    <param id="2" name="Logic Z">0</param>
-                </action>
-                <action id="1" name="Put chess on board" sid="8747865653464564" type="LayoutToBoard">
-                    <param id="0" name="Chess">Peao</param>
-                    <param id="1" name="Board">Board</param>
-                    <param id="2" name="Logic Z">1</param>
-                </action>
-                <action id="0" name="Call function" sid="2607542231303547" type="Function">
-                    <param id="0" name="Name">&quot;DirMode.Show&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4950108518428652">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="4926460454228136" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
-        <event-group description="Mecânica de movimentação do peão" sid="9183520823929307" title="Peão">
+        <event-group collapsed="1" description="" sid="5496918943477821" title="TABULEIRO">
             <sub-events>
-                <event-group description="" sid="4497441393808702" title="Movimento do peão">
+                <event-block sid="8036198230466318">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6101048111592138" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Setup layout" sid="2532736502358547" type="Board">
+                            <param id="0" name="Layout">SquareTx</param>
+                        </action>
+                        <action id="1" name="Put chess on board" sid="6700110581027936" type="LayoutToBoard">
+                            <param id="0" name="Chess">Casa</param>
+                            <param id="1" name="Board">Board</param>
+                            <param id="2" name="Logic Z">0</param>
+                        </action>
+                        <action id="1" name="Put chess on board" sid="8747865653464564" type="LayoutToBoard">
+                            <param id="0" name="Chess">Peao</param>
+                            <param id="1" name="Board">Board</param>
+                            <param id="2" name="Logic Z">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2607542231303547" type="Function">
+                            <param id="0" name="Name">&quot;DirMode.Show&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4950108518428652">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4926460454228136" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-group description="Mecânica de movimentação do peão" sid="9183520823929307" title="Peão">
                     <sub-events>
-                        <variable constant="0" name="passos" sid="2014353928405029" static="0" type="number">0</variable>
-                        <event-block sid="7864369399616167">
+                        <event-group description="" sid="4497441393808702" title="Movimento do peão">
+                            <sub-events>
+                                <variable constant="0" name="passos" sid="2014353928405029" static="0" type="number">0</variable>
+                                <event-block sid="7864369399616167">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="1400693533596274" type="Touch">
+                                            <param id="0" name="Object">TextoResultadoDado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="9874482963052694" type="System">
+                                            <param id="0" name="Group name">&quot;Move chess : start&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3026546236501786" type="System">
+                                            <param id="0" name="Variable">passos</param>
+                                            <param id="1" name="Value">int(random(1, 7))</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="5051033083647266" type="TextoResultadoDado">
+                                            <param id="0" name="Text">passos</param>
+                                        </action>
+                                        <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="6264501712274465" type="Peao">
+                                            <param id="0" name="Moving points">passos</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="6304477461840857" type="TextoRolarDado">
+                                            <param id="0" name="Text">&quot;Aguarde...&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3246310803574187">
+                                            <conditions>
+                                                <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="4215377107422028" type="Peao">
+                                                    <param id="0" name="Object">Casa</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="GridMove" id="11" name="Move to target" sid="263055341851685" type="Peao">
+                                                    <param id="0" name="Target">Casa</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <comment>Peão andando</comment>
+                        <event-block sid="2630763896510859">
                             <conditions>
-                                <condition id="3" name="On touched object" sid="1400693533596274" type="Touch">
-                                    <param id="0" name="Object">TextoResultadoDado</param>
+                                <condition behavior="GridMove" id="0" name="On hit target position" sid="6729946556036334" type="Peao" />
+                                <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="6413464492397552" type="Peao">
+                                    <param id="0" name="Object">Casa</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="9874482963052694" type="System">
-                                    <param id="0" name="Group name">&quot;Move chess : start&quot;</param>
-                                    <param id="1" name="State">0</param>
+                                <action behavior="GridMove" id="11" name="Move to target" sid="8122765376332636" type="Peao">
+                                    <param id="0" name="Target">Casa</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="3026546236501786" type="System">
-                                    <param id="0" name="Variable">passos</param>
-                                    <param id="1" name="Value">int(random(1, 7))</param>
-                                </action>
-                                <action id="0" name="Set text" sid="5051033083647266" type="TextoResultadoDado">
-                                    <param id="0" name="Text">passos</param>
-                                </action>
-                                <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="6264501712274465" type="Peao">
-                                    <param id="0" name="Moving points">passos</param>
-                                </action>
-                                <action id="0" name="Set text" sid="6304477461840857" type="TextoRolarDado">
+                                <action id="0" name="Set text" sid="650768799359416" type="TextoRolarDado">
                                     <param id="0" name="Text">&quot;Aguarde...&quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <comment>Peão terminando de andar</comment>
+                        <event-block sid="8476890994141044">
+                            <conditions>
+                                <condition behavior="GridMove" id="0" name="On hit target position" sid="3663592116856482" type="Peao" />
+                                <condition behavior="MonopolyMovement" id="3" name="Empty" sid="1564001702588055" type="Peao" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="4994313963056144" type="System">
+                                    <param id="0" name="Group name">&quot;Move chess : start&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action behavior="MonopolyMovement" id="5" name="Set face by number" sid="6612273121819657" type="Peao">
+                                    <param id="0" name="Face to">Peao.MonopolyMovement.TargetFaceDir</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8181868674790621" type="TextoRolarDado">
+                                    <param id="0" name="Text">&quot;CLIQUE NO DADO&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="3498312663785252" title="Custo de movimento">
+                    <sub-events>
+                        <event-block sid="3400628816622582">
+                            <conditions>
+                                <condition behavior="MonopolyMovement" id="7" name="On get moving cost" sid="4952575192732357" type="Peao" />
+                                <condition id="14" name="Pick chess above tile UID" sid="7172107699829324" type="Board">
+                                    <param id="0" name="Chess">Casa</param>
+                                    <param id="1" name="Tile UID">Peao.MonopolyMovement.TileUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="MonopolyMovement" id="7" name="Set cost" sid="3298152484485487" type="Peao">
+                                    <param id="0" name="Cost">Casa.cost</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>Menu de opções do rodapé da tela</comment>
+                <event-block sid="8801528166964967">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6865065761471013" type="Touch">
+                            <param id="0" name="Object">MenuOpcoes</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="8020046019215054" type="System">
+                            <param id="0" name="Layout">OpcoesTabuleiro</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5793602329541202">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3650775778873241" type="Touch">
+                            <param id="0" name="Object">MenuSair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="4179973944843765" type="System">
+                            <param id="0" name="Layout">TelaInicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Botão para puxar e ler carta de desafio (caso o peão caia em uma Casa de Desafio</comment>
+                <event-block sid="3316751500175399">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1839428554772019" type="Touch">
+                            <param id="0" name="Object">BotaoPuxarCarta</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-group description="" sid="2980196645495356" title="Casas de Desafio">
+                    <sub-events>
+                        <event-block sid="1339595711847871">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="1807853911444362" type="Peao">
+                                    <param id="0" name="Object">MostraCartaDesafio</param>
+                                </condition>
+                                <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="752888093524051" type="Peao" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="6414578247419702" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2805425322292551" title="Casas de Avanço/Retorno">
+                    <sub-events>
+                        <variable constant="0" name="passos2" sid="6663952385814971" static="0" type="number">0</variable>
+                        <event-block sid="154810845155566">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="2520716812819351" type="Peao">
+                                    <param id="0" name="Object">MovePeao</param>
+                                </condition>
+                                <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="4074202941824311" type="Peao" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="392127679595973" type="System">
+                                    <param id="0" name="Variable">passos2</param>
+                                    <param id="1" name="Value">int(random(1, 4))</param>
+                                </action>
+                                <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="7980169169275053" type="Peao">
+                                    <param id="0" name="Moving points">passos2</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="3246310803574187">
+                                <event-block sid="9706972131235279">
                                     <conditions>
-                                        <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="4215377107422028" type="Peao">
+                                        <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="9647114605176508" type="Peao">
                                             <param id="0" name="Object">Casa</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="GridMove" id="11" name="Move to target" sid="263055341851685" type="Peao">
+                                        <action behavior="GridMove" id="11" name="Move to target" sid="125410125461267" type="Peao">
                                             <param id="0" name="Target">Casa</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-group>
-                <comment>Peão andando</comment>
-                <event-block sid="2630763896510859">
-                    <conditions>
-                        <condition behavior="GridMove" id="0" name="On hit target position" sid="6729946556036334" type="Peao" />
-                        <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="6413464492397552" type="Peao">
-                            <param id="0" name="Object">Casa</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="GridMove" id="11" name="Move to target" sid="8122765376332636" type="Peao">
-                            <param id="0" name="Target">Casa</param>
-                        </action>
-                        <action id="0" name="Set text" sid="650768799359416" type="TextoRolarDado">
-                            <param id="0" name="Text">&quot;Aguarde...&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Peão terminando de andar</comment>
-                <event-block sid="8476890994141044">
-                    <conditions>
-                        <condition behavior="GridMove" id="0" name="On hit target position" sid="3663592116856482" type="Peao" />
-                        <condition behavior="MonopolyMovement" id="3" name="Empty" sid="1564001702588055" type="Peao" />
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Set group active" sid="4994313963056144" type="System">
-                            <param id="0" name="Group name">&quot;Move chess : start&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                        <action behavior="MonopolyMovement" id="5" name="Set face by number" sid="6612273121819657" type="Peao">
-                            <param id="0" name="Face to">Peao.MonopolyMovement.TargetFaceDir</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8181868674790621" type="TextoRolarDado">
-                            <param id="0" name="Text">&quot;CLIQUE NO DADO&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="3498312663785252" title="Custo de movimento">
-            <sub-events>
-                <event-block sid="3400628816622582">
-                    <conditions>
-                        <condition behavior="MonopolyMovement" id="7" name="On get moving cost" sid="4952575192732357" type="Peao" />
-                        <condition id="14" name="Pick chess above tile UID" sid="7172107699829324" type="Board">
-                            <param id="0" name="Chess">Casa</param>
-                            <param id="1" name="Tile UID">Peao.MonopolyMovement.TileUID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="MonopolyMovement" id="7" name="Set cost" sid="3298152484485487" type="Peao">
-                            <param id="0" name="Cost">Casa.cost</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <comment>Menu de opções do rodapé da tela</comment>
-        <event-block sid="8801528166964967">
-            <conditions>
-                <condition id="3" name="On touched object" sid="6865065761471013" type="Touch">
-                    <param id="0" name="Object">MenuOpcoes</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="8020046019215054" type="System">
-                    <param id="0" name="Layout">OpcoesTabuleiro</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5793602329541202">
-            <conditions>
-                <condition id="3" name="On touched object" sid="3650775778873241" type="Touch">
-                    <param id="0" name="Object">MenuSair</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="4179973944843765" type="System">
-                    <param id="0" name="Layout">TelaInicial</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Botão para puxar e ler carta de desafio (caso o peão caia em uma Casa de Desafio</comment>
-        <event-block sid="3316751500175399">
-            <conditions>
-                <condition id="3" name="On touched object" sid="1839428554772019" type="Touch">
-                    <param id="0" name="Object">BotaoPuxarCarta</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-group description="" sid="2980196645495356" title="Casas de Desafio">
-            <sub-events>
-                <event-block sid="1339595711847871">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="1807853911444362" type="Peao">
-                            <param id="0" name="Object">MostraCartaDesafio</param>
-                        </condition>
-                        <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="752888093524051" type="Peao" />
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="6414578247419702" type="System">
-                            <param id="0" name="Layer">2</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="2805425322292551" title="Casas de Avanço/Retorno">
-            <sub-events>
-                <variable constant="0" name="passos2" sid="6663952385814971" static="0" type="number">0</variable>
-                <event-block sid="154810845155566">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="2520716812819351" type="Peao">
-                            <param id="0" name="Object">MovePeao</param>
-                        </condition>
-                        <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="4074202941824311" type="Peao" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="392127679595973" type="System">
-                            <param id="0" name="Variable">passos2</param>
-                            <param id="1" name="Value">int(random(1, 4))</param>
-                        </action>
-                        <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="7980169169275053" type="Peao">
-                            <param id="0" name="Moving points">passos2</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="9706972131235279">
-                            <conditions>
-                                <condition behavior="MonopolyMovement" id="1" name="Pop tile" sid="9647114605176508" type="Peao">
-                                    <param id="0" name="Object">Casa</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="GridMove" id="11" name="Move to target" sid="125410125461267" type="Peao">
-                                    <param id="0" name="Target">Casa</param>
-                                </action>
-                            </actions>
+                        <event-block sid="1485593345855373">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="1485593345855373">
-                    <conditions />
-                    <actions />
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8916523628759073" title="DESAFIOS">
+            <sub-events>
+                <event-block sid="4539879372323486">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6956134482455289" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="8374141660830062" type="Desafios">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">&quot;Um professor perguntou a um aluno quais as principais características dos conceitos de Herança e Polimorfismo na Orientação a Objetos. O aluno respondeu que Herança é a capacidade de uma classe de receber (herdar) os atributos e métodos de sua classe pai e Polimorfismo consiste em duas ou mais classes possuirem métodos de nomes iguais, mas com diferentes assinaturas.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="7737284499372116" type="Desafios">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">&quot;Na Orientação a Objetos é possível estabelecer relacionamentos entre objetos instanciados. Os relacionamentos podem ser de 3 tipos diferentes: Composição (um objeto formado por outros objetos), Agregação (um objeto pode conter outros objetos) e Antecipação (um objeto pode ser criado antes de outros objetos).&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6130593536129681" type="Desafios">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">&quot;Um pacote é uma coleção de classes e interfaces que provem proteção de acesso e gerenciamento de espaços de nomes. Na linguagem Java, &apos;java.util&apos; é um exemplo de pacote.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="5103328549888517" type="Desafios">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">&quot;Na Orientação a Objetos, &apos;robustez&apos; é um conceito que significa a tolerância a falhas e confiabilidade de um software.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="3497031242688261" type="Desafios">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">&quot;Encapsulamento é o processo de esconder todos os detalhes de um objeto que não contribuem para suas características essenciais. Em Java, o encapsulamento é implementado através de ajustes de visibilidade, usando palavras-chave como &apos;public&apos; e &apos;private&apos;, por exemplo.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6826174545604809" type="Desafios">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Value">&quot;Em encapsulamento, atributos que fazem parte da implementação devem ser declarados como &apos;public&apos; (public class Pessoa).&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="7635396813199851" type="Desafios">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Value">&quot;Uma exceção é um desvio no fluxo de execução normal de um programa e não precisa ser tratado.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="4270142095792248" type="Desafios">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Value">&quot;Quando um erro ocorre dentro de um método, um objeto é automaticamente criado, contendo informações sobre o erro gerado, bem como o tipo de erro e o estado do programa. Para capturar esse objeto usamos o chamado &apos;throwing an exception&apos;.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="7161135049717751" type="Desafios">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Value">&quot;Em Java, um objeto de exceção é sempre uma instância de uma classe derivada &apos;Error&apos;&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="3174972225778391" type="Desafios">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Value">&quot;Uma Exceção Não-Verificada (Unchecked) precisa obrigatoriamente ser tratada, enquanto que uma Exceção Verificada (checked) pode ou não ser tratada.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="9087545106008201" type="Desafios">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Value">&quot;A serialização de arquivos em Java é feita utilizando as classes disponíveis no pacote &apos;java.lang&apos;.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="717846062557505" type="Desafios">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Value">&quot;Todas as classes que manipulam stream de bytes herdam de InputStream e OutputStream.&quot;</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="3900024428501575" type="Desafios">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Value">&quot;Java reconhece cada arquivo como um fluxo sequencial de bytes – Array de Bytes (Stream). Java abre um arquivo através da criação de um objeto e a associação de um fluxo de bytes a este objeto&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
