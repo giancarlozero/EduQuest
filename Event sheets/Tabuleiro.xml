@@ -241,7 +241,7 @@
                     <actions>
                         <action id="2" name="Set at X" sid="8374141660830062" type="Desafios">
                             <param id="0" name="X">0</param>
-                            <param id="1" name="Value">&quot;Um professor perguntou a um aluno quais as principais características dos conceitos de Herança e Polimorfismo na Orientação a Objetos. O aluno respondeu que Herança é a capacidade de uma classe de receber (herdar) os atributos e métodos de sua classe pai e Polimorfismo consiste em duas ou mais classes possuirem métodos de nomes iguais, mas com diferentes assinaturas.&quot;</param>
+                            <param id="1" name="Value">&quot;De acordo com os conceitos de Herança e Polimorfismo na Orientação a Objetos, Herança é a capacidade de uma classe de receber (herdar) os atributos e métodos de sua classe pai e Polimorfismo consiste em duas ou mais classes possuirem métodos de nomes iguais, mas com diferentes assinaturas.&quot;</param>
                         </action>
                         <action id="2" name="Set at X" sid="7737284499372116" type="Desafios">
                             <param id="0" name="X">1</param>
@@ -290,6 +290,16 @@
                         <action id="2" name="Set at X" sid="3900024428501575" type="Desafios">
                             <param id="0" name="X">12</param>
                             <param id="1" name="Value">&quot;Java reconhece cada arquivo como um fluxo sequencial de bytes – Array de Bytes (Stream). Java abre um arquivo através da criação de um objeto e a associação de um fluxo de bytes a este objeto&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5009762975238499">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2676122294255389" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4334571513151188" type="EnunciadoDesafio">
+                            <param id="0" name="Text">Desafios.At(random(0,13))</param>
                         </action>
                     </actions>
                 </event-block>

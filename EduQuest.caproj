@@ -49,7 +49,7 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="0" name="gui-hud">
+        <object-folder expanded="1" name="gui-hud">
             <object-type name="TextoRolarDado" sid="1785484461515545">
                 <plugin id="Text" />
             </object-type>
