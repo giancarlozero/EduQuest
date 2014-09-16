@@ -139,7 +139,7 @@
                     </sub-events>
                 </event-group>
                 <comment>Menu de opções do rodapé da tela</comment>
-                <event-block sid="8801528166964967">
+                <event-block disabled="1" sid="8801528166964967">
                     <conditions>
                         <condition id="3" name="On touched object" sid="6865065761471013" type="Touch">
                             <param id="0" name="Object">MenuOpcoes</param>
@@ -151,7 +151,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5793602329541202">
+                <event-block disabled="1" sid="5793602329541202">
                     <conditions>
                         <condition id="3" name="On touched object" sid="3650775778873241" type="Touch">
                             <param id="0" name="Object">MenuSair</param>
@@ -223,10 +223,6 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="1485593345855373">
-                            <conditions />
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -305,5 +301,21 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="2739468931738571">
+            <conditions>
+                <condition id="3" name="On touched object" sid="9299525577765106" type="Touch">
+                    <param id="0" name="Object">BotaoCorreta</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="9531964359446112" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="8811830097322092" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
