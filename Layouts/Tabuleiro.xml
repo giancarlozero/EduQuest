@@ -39,7 +39,7 @@
                         <y>-1</y>
                         <z>0</z>
                         <width>510</width>
-                        <height>340</height>
+                        <height>272</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1622,8 +1622,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>169.865814209</x>
-                        <y>288.912811279</y>
+                        <x>170</x>
+                        <y>408</y>
                         <z>0</z>
                         <width>306</width>
                         <height>34</height>
@@ -1645,10 +1645,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>408</x>
-                        <y>161</y>
+                        <y>136</y>
                         <z>0</z>
                         <width>150</width>
-                        <height>290</height>
+                        <height>250</height>
                         <depth>0</depth>
                         <hotspotX>0.500780046</hotspotX>
                         <hotspotY>0.500392795</hotspotY>
@@ -1899,8 +1899,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>407.561157227</x>
-                        <y>265.240692139</y>
+                        <x>408</x>
+                        <y>408</y>
                         <z>0</z>
                         <width>137.457702637</width>
                         <height>84.098594666</height>
@@ -1914,8 +1914,8 @@
                 <instance type="MenuOpcoes" uid="57">
                     <properties>
                         <text>Opções</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16,700,0</font>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-12,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -1926,11 +1926,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>75</x>
-                        <y>278</y>
+                        <x>347</x>
+                        <y>230</y>
                         <z>0</z>
-                        <width>68</width>
-                        <height>34</height>
+                        <width>50</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1941,8 +1941,8 @@
                 <instance type="MenuSair" uid="67">
                     <properties>
                         <text>SAIR</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16,700,0</font>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-12,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -1953,11 +1953,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>210</x>
-                        <y>279</y>
+                        <x>437</x>
+                        <y>230</y>
                         <z>0</z>
-                        <width>68</width>
-                        <height>34</height>
+                        <width>50</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1990,11 +1990,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
+                        <x>0.642959595</x>
                         <y>-1</y>
                         <z>0</z>
-                        <width>511.285919189</width>
-                        <height>333.149139404</height>
+                        <width>510</width>
+                        <height>272</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -2055,7 +2055,7 @@
                     <properties>
                         <text>Enunciado</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-13,400,0</font>
+                        <font>Arial,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -2066,11 +2066,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>122</x>
+                        <x>119</x>
                         <y>56</y>
                         <z>0</z>
-                        <width>266</width>
-                        <height>191</height>
+                        <width>272</width>
+                        <height>150</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -2080,9 +2080,9 @@
                 </instance>
                 <instance type="TextoBotoesDesafio" uid="94">
                     <properties>
-                        <text>Esta resposta está correta ou errada?</text>
+                        <text>Esta afirmação está correta ou errada?</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-13,400,0</font>
+                        <font>Arial,-12,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -2093,8 +2093,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>137</x>
-                        <y>253</y>
+                        <x>146</x>
+                        <y>216</y>
                         <z>0</z>
                         <width>227</width>
                         <height>19</height>
@@ -2121,7 +2121,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>137</x>
-                        <y>287</y>
+                        <y>235</y>
                         <z>0</z>
                         <width>127</width>
                         <height>37</height>
@@ -2148,7 +2148,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>273</x>
-                        <y>287</y>
+                        <y>235</y>
                         <z>0</z>
                         <width>100</width>
                         <height>39</height>

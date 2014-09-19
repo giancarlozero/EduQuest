@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Tabuleiro</name>
     <events>
-        <event-group collapsed="1" description="" sid="5496918943477821" title="TABULEIRO">
+        <event-group description="" sid="5496918943477821" title="TABULEIRO">
             <sub-events>
                 <event-block sid="8036198230466318">
                     <conditions>
@@ -164,7 +164,7 @@
                     </actions>
                 </event-block>
                 <comment>Botão para puxar e ler carta de desafio (caso o peão caia em uma Casa de Desafio</comment>
-                <event-block sid="3316751500175399">
+                <event-block disabled="1" sid="3316751500175399">
                     <conditions>
                         <condition id="3" name="On touched object" sid="1839428554772019" type="Touch">
                             <param id="0" name="Object">BotaoPuxarCarta</param>
@@ -299,23 +299,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2739468931738571">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9299525577765106" type="Touch">
+                            <param id="0" name="Object">BotaoCorreta</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="9531964359446112" type="System">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="8811830097322092" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="2739468931738571">
-            <conditions>
-                <condition id="3" name="On touched object" sid="9299525577765106" type="Touch">
-                    <param id="0" name="Object">BotaoCorreta</param>
-                </condition>
-                <condition id="-9" name="Layer is visible" sid="9531964359446112" type="System">
-                    <param id="0" name="Layer">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set layer visible" sid="8811830097322092" type="System">
-                    <param id="0" name="Layer">2</param>
-                    <param id="1" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
