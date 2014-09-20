@@ -158,6 +158,7 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-21" name="Reset global variables" sid="1143419782439202" type="System" />
                         <action id="-2" name="Go to layout" sid="4179973944843765" type="System">
                             <param id="0" name="Layout">TelaInicial</param>
                         </action>
@@ -177,7 +178,7 @@
                         <event-block sid="1339595711847871">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="1807853911444362" type="Peao">
-                                    <param id="0" name="Object">MostraCartaDesafio</param>
+                                    <param id="0" name="Object">MostraDesafio</param>
                                 </condition>
                                 <condition behavior="GridMove" id="3" inverted="1" name="Is moving" sid="752888093524051" type="Peao" />
                             </conditions>
@@ -190,6 +191,19 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="6465789017074706">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5864468219270028" type="Touch">
+                            <param id="0" name="Object">BotaoCorreta</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="3973116811127968" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" sid="2805425322292551" title="Casas de Avanço/Retorno">
                     <sub-events>
                         <variable constant="0" name="passos2" sid="6663952385814971" static="0" type="number">0</variable>
@@ -296,22 +310,6 @@
                     <actions>
                         <action id="0" name="Set text" sid="4334571513151188" type="EnunciadoDesafio">
                             <param id="0" name="Text">Desafios.At(random(0,13))</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2739468931738571">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="9299525577765106" type="Touch">
-                            <param id="0" name="Object">BotaoCorreta</param>
-                        </condition>
-                        <condition id="-9" name="Layer is visible" sid="9531964359446112" type="System">
-                            <param id="0" name="Layer">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="8811830097322092" type="System">
-                            <param id="0" name="Layer">2</param>
-                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

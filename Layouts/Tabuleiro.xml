@@ -1089,7 +1089,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="98">
+                <instance type="MostraDesafio" uid="98">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1111,7 +1111,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="99">
+                <instance type="MostraDesafio" uid="99">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1133,7 +1133,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="100">
+                <instance type="MostraDesafio" uid="100">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1155,7 +1155,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="101">
+                <instance type="MostraDesafio" uid="101">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1177,7 +1177,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="102">
+                <instance type="MostraDesafio" uid="102">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1199,7 +1199,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="103">
+                <instance type="MostraDesafio" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1221,7 +1221,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="104">
+                <instance type="MostraDesafio" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1243,7 +1243,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="105">
+                <instance type="MostraDesafio" uid="105">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1265,7 +1265,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="106">
+                <instance type="MostraDesafio" uid="106">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1287,7 +1287,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="107">
+                <instance type="MostraDesafio" uid="107">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1309,7 +1309,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="108">
+                <instance type="MostraDesafio" uid="108">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1331,7 +1331,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="109">
+                <instance type="MostraDesafio" uid="109">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1353,7 +1353,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="MostraCartaDesafio" uid="110">
+                <instance type="MostraDesafio" uid="110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -307,7 +307,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="MostraCartaDesafio" sid="141614826038644">
+            <object-type name="MostraDesafio" sid="141614826038644">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3125652327950613" speed="5">
