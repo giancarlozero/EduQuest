@@ -11,7 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Tabuleiro</layout>
-        <event-sheet active="1">Tabuleiro</event-sheet>
+        <layout active="1">TelaInicial</layout>
+        <event-sheet>Tabuleiro</event-sheet>
+        <event-sheet>TelaInicial</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

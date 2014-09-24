@@ -50,16 +50,16 @@
     </configuration-settings>
     <object-folder expanded="1">
         <object-folder expanded="1" name="gui-hud">
-            <object-type name="TextoRolarDado" sid="1785484461515545">
+            <object-type name="HUDCliqueNoDado" sid="1785484461515545">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TextoResultadoDado" sid="6913811722589862">
+            <object-type name="HUDResultadoDado" sid="6913811722589862">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TituloEduQuest" sid="2127787048154097">
+            <object-type name="StartTituloEduQuest" sid="2127787048154097">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TextoIniciarJogo" sid="4069895336170236">
+            <object-type name="StartIniciarJogo" sid="4069895336170236">
                 <plugin id="Text" />
             </object-type>
             <object-type name="HUDInferior" sid="290036963574866">
@@ -113,7 +113,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="PlacarPeoes" sid="5620480000755481">
+            <object-type name="HUDPlacarPeoes" sid="5620480000755481">
                 <plugin id="Sprite" />
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9137191941238561" speed="5">
@@ -128,19 +128,19 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="PontosVerde" sid="5351222795718195">
+            <object-type name="HUDPontosVerde" sid="5351222795718195">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="PontosAmarelo" sid="3994446720358145">
+            <object-type name="HUDPontosAmarelo" sid="3994446720358145">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="PontosAzul" sid="7632006768902308">
+            <object-type name="HUDPontosAzul" sid="7632006768902308">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="PontosVermelho" sid="2514289821581503">
+            <object-type name="HUDPontosVermelho" sid="2514289821581503">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="TextoPlacar" sid="3389138912745323">
+            <object-type name="HUDTextoPlacar" sid="3389138912745323">
                 <plugin id="Text" />
             </object-type>
             <object-type name="BotaoPuxarCarta" sid="3676708901222213">
@@ -162,13 +162,13 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="MenuOpcoes" sid="7258273430990422">
+            <object-type name="HUDOpcoes" sid="7258273430990422">
                 <plugin id="Text" />
             </object-type>
             <object-type name="MenuVerPlacares" sid="6527412807279604">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="MenuSair" sid="5599042431354771">
+            <object-type name="HUDSair" sid="5599042431354771">
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextoCarta" sid="3871700423516068">
@@ -199,11 +199,17 @@
             </object-type>
             <object-type name="BotaoCorreta" sid="1493082029558456">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="ativo" sid="8564983478870066" type="boolean" />
+                </instance-variables>
             </object-type>
             <object-type name="BotaoErrada" sid="8291286641339404">
                 <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="ativo" sid="6668395068251195" type="boolean" />
+                </instance-variables>
             </object-type>
-            <object-type name="TelaInicialVersao" sid="1628462916619055">
+            <object-type name="StartVersao" sid="1628462916619055">
                 <plugin id="Text" />
             </object-type>
             <object-type name="OpcoesDeJogo" sid="4411248574245249">
@@ -230,7 +236,7 @@
             <object-type name="OpcoesSalvarSair" sid="2681455348537152">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="MenuOpcoesInicial" sid="4223674704561171">
+            <object-type name="StartOpcoes" sid="4223674704561171">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -347,16 +353,12 @@
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>TelaInicial.xml</layout>
         <layout>Tabuleiro.xml</layout>
-        <layout>OpcoesTabuleiro.xml</layout>
-        <layout>OpcoesInicial.xml</layout>
+        <layout>TelaInicial.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Tabuleiro.xml</event-sheet>
         <event-sheet>TelaInicial.xml</event-sheet>
-        <event-sheet>OpcoesTabuleiro.xml</event-sheet>
-        <event-sheet>OpcoesInicial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="44">

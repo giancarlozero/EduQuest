@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Tabuleiro</name>
     <events>
-        <event-group description="" sid="5496918943477821" title="TABULEIRO">
+        <event-group collapsed="1" description="" sid="5496918943477821" title="TABULEIRO">
             <sub-events>
                 <event-block sid="8036198230466318">
                     <conditions>
@@ -43,7 +43,7 @@
                                 <event-block sid="7864369399616167">
                                     <conditions>
                                         <condition id="3" name="On touched object" sid="1400693533596274" type="Touch">
-                                            <param id="0" name="Object">TextoResultadoDado</param>
+                                            <param id="0" name="Object">HUDResultadoDado</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -55,13 +55,13 @@
                                             <param id="0" name="Variable">passos</param>
                                             <param id="1" name="Value">int(random(1, 7))</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="5051033083647266" type="TextoResultadoDado">
+                                        <action id="0" name="Set text" sid="5051033083647266" type="HUDResultadoDado">
                                             <param id="0" name="Text">passos</param>
                                         </action>
                                         <action behavior="MonopolyMovement" id="2" name="Get forwarding path" sid="6264501712274465" type="Peao">
                                             <param id="0" name="Moving points">passos</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="6304477461840857" type="TextoRolarDado">
+                                        <action id="0" name="Set text" sid="6304477461840857" type="HUDCliqueNoDado">
                                             <param id="0" name="Text">&quot;Aguarde...&quot;</param>
                                         </action>
                                     </actions>
@@ -94,7 +94,7 @@
                                 <action behavior="GridMove" id="11" name="Move to target" sid="8122765376332636" type="Peao">
                                     <param id="0" name="Target">Casa</param>
                                 </action>
-                                <action id="0" name="Set text" sid="650768799359416" type="TextoRolarDado">
+                                <action id="0" name="Set text" sid="650768799359416" type="HUDCliqueNoDado">
                                     <param id="0" name="Text">&quot;Aguarde...&quot;</param>
                                 </action>
                             </actions>
@@ -113,7 +113,7 @@
                                 <action behavior="MonopolyMovement" id="5" name="Set face by number" sid="6612273121819657" type="Peao">
                                     <param id="0" name="Face to">Peao.MonopolyMovement.TargetFaceDir</param>
                                 </action>
-                                <action id="0" name="Set text" sid="8181868674790621" type="TextoRolarDado">
+                                <action id="0" name="Set text" sid="8181868674790621" type="HUDCliqueNoDado">
                                     <param id="0" name="Text">&quot;CLIQUE NO DADO&quot;</param>
                                 </action>
                             </actions>
@@ -142,19 +142,15 @@
                 <event-block disabled="1" sid="8801528166964967">
                     <conditions>
                         <condition id="3" name="On touched object" sid="6865065761471013" type="Touch">
-                            <param id="0" name="Object">MenuOpcoes</param>
+                            <param id="0" name="Object">HUDOpcoes</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="8020046019215054" type="System">
-                            <param id="0" name="Layout">OpcoesTabuleiro</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block disabled="1" sid="5793602329541202">
                     <conditions>
                         <condition id="3" name="On touched object" sid="3650775778873241" type="Touch">
-                            <param id="0" name="Object">MenuSair</param>
+                            <param id="0" name="Object">HUDSair</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -189,21 +185,24 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="6465789017074706">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="5864468219270028" type="Touch">
+                                    <param id="0" name="Object">BotaoCorreta</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9247989083117654" type="BotaoCorreta">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="3973116811127968" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="6465789017074706">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="5864468219270028" type="Touch">
-                            <param id="0" name="Object">BotaoCorreta</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="3973116811127968" type="System">
-                            <param id="0" name="Layer">2</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-group description="" sid="2805425322292551" title="Casas de Avanço/Retorno">
                     <sub-events>
                         <variable constant="0" name="passos2" sid="6663952385814971" static="0" type="number">0</variable>
@@ -242,7 +241,69 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8916523628759073" title="DESAFIOS">
+        <event-group collapsed="1" description="" sid="788028402940353" title="HUD">
+            <sub-events>
+                <event-block sid="1221490369447643">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9381056926056262" type="Touch">
+                            <param id="0" name="Object">HUDOpcoes</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="4984303219386265" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1261542481374649">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8505909527863916" type="Touch">
+                            <param id="0" name="Object">HUDSair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="6344185989106066" type="System" />
+                        <action id="-2" name="Go to layout" sid="8850798511602187" type="System">
+                            <param id="0" name="Layout">TelaInicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="5582149246533788" title="TELA DE OPÇÕES">
+            <sub-events>
+                <event-block sid="2474406088228301">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4915403533937082" type="Touch">
+                            <param id="0" name="Object">OpcoesSIM</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="7622991894538549" type="System" />
+                        <action id="-4" name="Set layer visible" sid="7744023518130293" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8117255386996232">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="153298958339817" type="Touch">
+                            <param id="0" name="Object">OpcoesSalvarSair</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="9807634983586621" type="System" />
+                        <action id="-4" name="Set layer visible" sid="1987736901429009" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="8916523628759073" title="DESAFIOS">
             <sub-events>
                 <event-block sid="4539879372323486">
                     <conditions>
