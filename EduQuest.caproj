@@ -350,6 +350,24 @@
         <object-type global="1" name="Desafios" sid="4290239510727422">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Sprite" sid="1581219345465285">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8714532028268446" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Giancarlo Silva\Desktop\eqlogo.png">
+                        <collision-poly>
+                            <point x="0.055" y="0.0366667" />
+                            <point x="0.96" y="0.0266667" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.825" y="0.883333" />
+                            <point x="0.5" y="0.986667" />
+                            <point x="0.175" y="0.883333" />
+                            <point x="0.02" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

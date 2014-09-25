@@ -47,36 +47,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StartTituloEduQuest" uid="40">
-                    <properties>
-                        <text>EduQuest</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-91,700,0</font>
-                        <color>255,204,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>31</x>
-                        <y>36</y>
-                        <z>0</z>
-                        <width>453</width>
-                        <height>132</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="StartVersao" uid="52">
                     <properties>
-                        <text>0.1.3 alpha</text>
+                        <text>0.1.4 alpha</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,255,0</color>
@@ -89,8 +62,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>381</x>
-                        <y>126</y>
+                        <x>302.453582764</x>
+                        <y>85.019256592</y>
                         <z>0</z>
                         <width>100</width>
                         <height>30</height>
@@ -116,8 +89,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>159</x>
-                        <y>179</y>
+                        <x>265.157714844</x>
+                        <y>144.502212524</y>
                         <z>0</z>
                         <width>173</width>
                         <height>37</height>
@@ -143,14 +116,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>191</x>
-                        <y>222</y>
+                        <x>294.74319458</x>
+                        <y>186.28364563</y>
                         <z>0</z>
                         <width>108</width>
                         <height>37</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="40">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>132.060424805</x>
+                        <y>129.979019165</y>
+                        <z>0</z>
+                        <width>147.324783325</width>
+                        <height>220.987182617</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
