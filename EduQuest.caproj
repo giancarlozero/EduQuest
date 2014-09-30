@@ -23,6 +23,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Rex.Rainbow" id="Rex_GridMove" version="0.100000001">Grid Move</behavior>
         <behavior author="Rex.Rainbow" id="Rex_MonopolyMovement" version="0.100000001">Monopoly movement</behavior>
     </used-behaviors>
@@ -49,9 +50,14 @@
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-folder expanded="1" name="gui-hud">
+        <object-folder expanded="0" name="gui-hud">
             <object-type name="HUDCliqueNoDado" sid="1785484461515545">
                 <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="3104852066914866">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
             <object-type name="HUDResultadoDado" sid="6913811722589862">
                 <plugin id="Text" />
@@ -96,6 +102,11 @@
             </object-type>
             <object-type name="Dado" sid="4755594483194413">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="9945362331144378">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2933453154537317" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507246">
@@ -239,8 +250,23 @@
             <object-type name="StartOpcoes" sid="4223674704561171">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="ComoJogarPasso01" sid="2607783256397227">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ComoJogarPasso02" sid="9235233063382719">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="StartComoJogar" sid="5820031552036552">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ComoJogarPasso03" sid="6725893957873105">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ComoJogarSair" sid="3052072027725534">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="tabuleiro">
+        <object-folder expanded="0" name="tabuleiro">
             <object-type global="1" name="Board" sid="329029806366312">
                 <plugin id="Rex_SLGBoard" />
             </object-type>
@@ -350,7 +376,7 @@
         <object-type global="1" name="Desafios" sid="4290239510727422">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Sprite" sid="1581219345465285">
+        <object-type name="LogotipoEduQuest" sid="1581219345465285">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8714532028268446" speed="5">
@@ -368,15 +394,41 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Passo01" sid="5234110193741569">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6934005471215987" speed="5">
+                    <frame duration="1" hotspotX="0.500956" hotspotY="0.501608" original-source="C:\Users\Usuario\Desktop\dado.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Passo02" sid="3086815991350431">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9612102954067659" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500657" original-source="C:\Users\Usuario\Desktop\desafio.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Passo03" sid="5969630003573366">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8231154158931462" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502075" original-source="C:\Users\Usuario\Desktop\placar.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Tabuleiro.xml</layout>
         <layout>TelaInicial.xml</layout>
+        <layout>ComoJogar.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Tabuleiro.xml</event-sheet>
         <event-sheet>TelaInicial.xml</event-sheet>
+        <event-sheet>ComoJogar.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="44">

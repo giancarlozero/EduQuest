@@ -45,5 +45,17 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="6027589507137092">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6549005340946253" type="Touch">
+                    <param id="0" name="Object">StartComoJogar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2158310525056233" type="System">
+                    <param id="0" name="Layout">ComoJogar</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

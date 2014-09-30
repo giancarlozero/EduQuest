@@ -49,7 +49,7 @@
                 </instance>
                 <instance type="StartVersao" uid="52">
                     <properties>
-                        <text>0.1.4 alpha</text>
+                        <text>0.1.5 alpha</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,255,0</color>
@@ -78,7 +78,7 @@
                     <properties>
                         <text>INICIAR JOGO</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,700,0</font>
+                        <font>Arial,-17,700,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -89,11 +89,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>265.157714844</x>
-                        <y>144.502212524</y>
+                        <x>284.965667725</x>
+                        <y>143.13609314</y>
                         <z>0</z>
-                        <width>173</width>
-                        <height>37</height>
+                        <width>123.823852539</width>
+                        <height>25</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -105,7 +105,7 @@
                     <properties>
                         <text>OPÇÕES</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,700,0</font>
+                        <font>Arial,-17,700,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -116,11 +116,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>294.74319458</x>
-                        <y>186.28364563</y>
+                        <x>305.743225098</x>
+                        <y>199.28364563</y>
                         <z>0</z>
-                        <width>108</width>
-                        <height>37</height>
+                        <width>75.897491455</width>
+                        <height>23.33984375</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -128,7 +128,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="40">
+                <instance type="LogotipoEduQuest" uid="40">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -146,6 +146,33 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StartComoJogar" uid="79">
+                    <properties>
+                        <text>COMO JOGAR</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-17,700,0</font>
+                        <color>255,255,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>283.549865723</x>
+                        <y>170.945083618</y>
+                        <z>0</z>
+                        <width>122.136901855</width>
+                        <height>23.169937134</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
