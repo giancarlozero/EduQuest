@@ -1,11 +1,11 @@
-﻿EduQuest
+﻿EduQuest - WIP
 ========
 
-Projeto de jogo educativo (serious game) em HTML5 para o meu TCC do curso de TADS do IFRN Natal/Central.
+Projeto de jogo educativo (serious game) em HTML5 para o meu TCC do curso de TADS do IFRN Natal/Central. Ainda em desenvolvimento, estando na versão 0.1.5 alpha.
 
 Jogo de tabuleiro virtual com desafios para o aluno responder e marcar pontos. Desenvolvido por Giancarlo Lima da Silva com a engine de jogo Construct 2, disponível no site http://scirra.com/construct2
 
-Este jogo está licenciado sob a Licença Apache 2.0. Você pode encontrar uma cópia da licença dentro deste repositório ou [nesta página do Choose a License](http://choosealicense.com/licenses/apache-2.0/).
+Este jogo está licenciado sob a Licença Apache 2.0. Você pode encontrar uma cópia da licença dentro deste repositório ou [nesta página do Choose a License](http://choosealicense.com/licenses/apache-2.0/). Qualquer ajuda será bem-vinda. ^^
 
 Como utilizar:
 --------------
